@@ -1,0 +1,31 @@
+:root {
+  --text-lg: 2rem;
+  --text-sm: 1.25rem;
+  --black: #000;
+  --white: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+
+@media (min-width: 64em) {
+  :root {
+    --text-lg: 3rem;
+    --text-sm: 1.5rem;
+  }
+}
