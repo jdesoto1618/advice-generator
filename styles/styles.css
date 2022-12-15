@@ -1,6 +1,6 @@
 :root {
   --text-lg: 2rem;
-  --text-sm: 1.25rem;
+  --text-sm: 1rem;
   --black: #000;
   --white: #fff;
   --blue-700: hsl(217, 19%, 38%);
@@ -26,16 +26,55 @@ body {
 body {
   font-size: 62.5%;
   font-family: "Manrope", sans-serif;
-  background-color: var(--site-bg-color);
+  font-weight: 400;
+  background-color: var(--blue-900);
 }
 
-h1 {
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.advice-container {
+  background-color: var(--blue-800);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+}
+
+.advice-copy-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.advice-title {
+  font-size: var(--text-sm);
   color: var(--green-200);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.advice-text {
+  font-size: var(--text-lg);
+  color: var(--white);
 }
 
 @media (min-width: 64em) {
   :root {
     --text-lg: 2.8rem;
-    --text-sm: 1.5rem;
+    --text-sm: 1.25rem;
+  }
+
+  .main-wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  .advice-container {
+    padding: 3rem;
   }
 }
