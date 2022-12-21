@@ -12,6 +12,7 @@
 
 html,
 body {
+  font-size: 62.5%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,7 +25,6 @@ body {
 }
 
 body {
-  font-size: 62.5%;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   background-color: var(--blue-900);
@@ -40,8 +40,8 @@ body {
 
 .advice-container {
   background-color: var(--blue-800);
-  border-radius: 1rem;
-  padding: 1.75rem;
+  border-radius: 1.5rem;
+  padding: 3rem;
   position: relative;
 }
 
@@ -55,7 +55,7 @@ body {
   font-size: var(--text-sm);
   color: var(--green-200);
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.33rem;
   margin: 0;
   text-align: center;
 }
@@ -65,15 +65,44 @@ body {
   color: var(--white);
   margin: 0;
   text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.advice-divider-wrapper {
+  height: 0.1rem;
+  background: var(--blue-700);
+  margin: 3rem 0;
+  position: relative;
+}
+
+.vertical-bars-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--blue-800);
+  width: 5.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.65rem 1.5rem;
+}
+
+.vertical-bar {
+  background: var(--white);
+  width: 0.6rem;
+  height: 100%;
+  border-radius: 1rem;
 }
 
 .advice-button-container {
   position: absolute;
   left: 50%;
-  bottom: -2.5rem;
+  bottom: -3.125rem;
   transform: translateX(-50%);
-  width: 5rem;
-  height: 5rem;
+  width: 6.25rem;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--green-200);
 }
@@ -102,11 +131,11 @@ body {
   }
 
   .main-wrapper {
-    max-width: 50rem;
+    max-width: 70rem;
     margin: 0 auto;
   }
 
   .advice-container {
-    padding: 3.5rem;
+    padding: 5rem;
   }
 }
