@@ -105,6 +105,7 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--green-200);
+  box-shadow: none;
 }
 
 .advice-generator-button {
@@ -137,5 +138,13 @@ body {
 
   .advice-container {
     padding: 5rem;
+  }
+
+  .advice-button-container {
+    transition: box-shadow 0.2s ease;
+  }
+
+  .advice-button-container:hover {
+    box-shadow: 0 0 3rem var(--green-200);
   }
 }
