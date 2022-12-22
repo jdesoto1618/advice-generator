@@ -45,6 +45,17 @@ body {
   position: relative;
 }
 
+.advice-timer-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: conic-gradient(var(--green-200) var(--percentage), transparent 0);
+  border-radius: 50%;
+  animation: timer 10s infinite linear;
+}
+
 .advice-copy-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -123,6 +134,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@property --percentage {
+  initial-value: 0%;
+  inherits: false;
+  syntax: "<percentage>";
+}
+
+@keyframes timer {
+  to {
+    --percentage: 100%;
+  }
 }
 
 @media (min-width: 64em) {

@@ -18,4 +18,10 @@ window.addEventListener("DOMContentLoaded", () => {
   adviceGenerator.addEventListener("click", () => {
     getAdvice(BASE_URL);
   });
+
+  const adviceGeneratorClick = () => {
+    adviceGenerator.click();
+  };
+
+  setInterval(adviceGeneratorClick, 10000);
 });
