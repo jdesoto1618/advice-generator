@@ -54,6 +54,11 @@ body {
   background: conic-gradient(var(--green-200) var(--percentage), transparent 0);
   border-radius: 50%;
   animation: timer 10s infinite linear;
+  display: none;
+}
+
+.advice-timer-container.active {
+  display: block;
 }
 
 .advice-copy-container {

@@ -3,6 +3,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const BASE_URL = "https://api.adviceslip.com/advice";
   const adviceId = document.querySelector(".advice-number");
   const adviceTextElement = document.querySelector(".advice-text");
+  const adviceTimerContainer = document.querySelector(
+    ".advice-timer-container"
+  );
 
   const getAdvice = async (url) => {
     await fetch(url)
@@ -15,13 +18,21 @@ window.addEventListener("DOMContentLoaded", () => {
 
   getAdvice(BASE_URL);
 
-  adviceGenerator.addEventListener("click", () => {
-    getAdvice(BASE_URL);
-  });
-
-  const adviceGeneratorClick = () => {
+  const clickGetAdviceButton = () => {
     adviceGenerator.click();
+    adviceTimerContainer.classList.remove("active");
+    setTimeout(() => {
+      adviceTimerContainer.classList.add("active");
+    }, 10);
   };
 
-  setInterval(adviceGeneratorClick, 10000);
+  setInterval(clickGetAdviceButton, 10000);
+
+  adviceGenerator.addEventListener("click", () => {
+    getAdvice(BASE_URL);
+    adviceTimerContainer.classList.remove("active");
+    setTimeout(() => {
+      adviceTimerContainer.classList.add("active");
+    }, 10);
+  });
 });
